@@ -22,4 +22,9 @@ describe("String Calculator", () => {
   test("should throw error for negative numbers", () => {
     expect(() => add("-1,2")).toThrow("negative numbers not allowed -1");
   });
+  test("should show all negative numbers in error message", () => {
+    expect(() => add("-1,-2,3,-4")).toThrow(
+      "negative numbers not allowed -1,-2,-4"
+    );
+  });
 });
