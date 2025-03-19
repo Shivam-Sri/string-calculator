@@ -38,4 +38,7 @@ describe("String Calculator", () => {
   test("should handle multiple delimiters", () => {
     expect(add("//[*][%]\n1*2%3")).toBe(6);
   });
+  test("should handle multiple delimiters with length longer than one char", () => {
+    expect(add("//[***][#####][@@]\n1***2#####3@@4")).toBe(10);
+  });
 });
